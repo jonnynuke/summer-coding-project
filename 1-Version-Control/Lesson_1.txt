@@ -1,0 +1,15 @@
+GitHub is a web-based version of Git software. Git provides version control for coding projects and is very useful. 
+
+The usage of Git is a bit hard to learn, but with GitHub, there is a relatively nice user interface using a web browser.
+
+The project is called a "repository" - all versions that have been saved to the repository can be pulled out and used as needed: so if your code worked yesterday but suddenly stopped working, you can pull yesterday's version, as long as you saved it to the repository. 
+
+We haven't learned about the Linux system yet, but I will put a few simple commands here for future reference:
+
+git clone https://github.com/jonnynuke/summer-coding-project.git
+This clones the repository into your working folder, creating your own copy.
+
+git pull
+This pulls the latest version of the repository - so if I've changed something, this is the command you'll use to get that update
+
+If you are using a repository that you have "push" privileges in, you can write your own changes and save them to the repository.
