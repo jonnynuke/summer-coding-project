@@ -4,12 +4,35 @@ The usage of Git is a bit hard to learn, but with GitHub, there is a relatively 
 
 The project is called a "repository" - all versions that have been saved to the repository can be pulled out and used as needed: so if your code worked yesterday but suddenly stopped working, you can pull yesterday's version, as long as you saved it to the repository. 
 
-We haven't learned about the Linux system yet, but I will put a few simple commands here for future reference:
+I have put in separate branches for both of you, so that you can commit to your branch without changing anyone else's work.
 
-git clone https://github.com/jonnynuke/summer-coding-project.git
+We haven't learned about the Linux system yet, but I will put a few simple commands here for future reference:
+To indicate commands given to the Linux system, I use ">>". Do not include the ">>" in your commands with Linux.
+
+To clone your branch:
+for Jacob:
+>>git clone -b Jacob USERNAME@github.com/jonnynuke/summer-coding-project.git
+for Vicki:
+>>git clone -b Vicki USERNAME@github.com/jonnynuke/summer-coding-project.git
 This clones the repository into your working folder, creating your own copy.
 
-git pull
-This pulls the latest version of the repository - so if I've changed something, this is the command you'll use to get that update
+>>git pull
+This pulls the latest version of the repository - so if I've changed something, this is the command you'll use to get that update.
 
-If you are using a repository that you have "push" privileges in, you can write your own changes and save them to the repository.
+You will have permission to push to your branch of the project: this is essentially saving your progress. But first, you have to tell Git what changes to save. There are some easy commands to save "all" changes (see https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add) but the main one is:
+>>git add -A stages All
+
+
+you can also add or remove files:
+>>git add my_new_file.txt
+>>git rm my_old_file.txt
+
+At this point, we're almost ready to save our changes! By default, this should save to whatever branch you are working in. 
+Git always wants a message about the changes you are making, so first, let's tell it what our message is:
+>>git commit -m "I added my_new_file.txt and removed my_old_file.txt"
+If you skip this step, it will give you a complicated vi terminal window in which you must input your message and figure out how to save and exit. Don't skip this step.
+
+Finally, we can commit our changes:
+>>git commit -a
+
+Now your changes are saved and backed up. If you have collaborators, they can pull to see your latest changes.
